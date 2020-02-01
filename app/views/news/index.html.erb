@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>Miura news</title>
+    <meta name="description" content="初めてのホームページ">
+    <link rel="stylesheet" href="stylesheets/top.scss">
+    <%# ”後で設定ロゴ入れる”<link rel="icon" type="image/png" href =""> %>
+  </head>
+
+  <body>
+    <div id="news" class="big-bg">      
+      <header class="page-header wrapper">
+          
+        <h1><a href='/'> <%= image_tag 'kamen.jpg',class: 'logo'%></a></h1>
+          
+          <nav>
+            <ul class="main-nav">
+                <li><%= link_to "News", '/post/new' %></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="contact.haml">Contact</a></li>
+            </ul>
+          </nav>
+       </header>
+       <div class="wrapper">
+            <h2 class="page-title">News</h2>    
+        </div>          
+    </div><!--/#news --> 
+  </body>
+</html>

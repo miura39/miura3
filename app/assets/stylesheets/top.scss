@@ -66,7 +66,7 @@ img{
 }
 /*見出し*/
 .page-title{
-  font-size: 5rem;
+  font-size: 4rem;
   font-family: 'philosopher', serif;
   text-transform: uppercase;
   font-weight: normal;
@@ -87,12 +87,25 @@ img{
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
+  text-algin: center;
 }
 
 #home{
-  background-image: url(old.jpg);
+  background-image: url(old.jpg),linear-gradient(#c9ffbf,#ffafbd);
   min-height: 100vh;
+  background-color: #8bd;
+  background-blend-mode: hard-light;
 }
 #home .page-title{
   text-transform: none;
+}
+/* News
+--------------------------*/
+#news{
+  background-image: url(old.jpg);
+  height: 270px;
+  margin-bottom: 40px;
+}
+#news .page-title{
+  text-align: center;
 }
