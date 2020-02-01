@@ -1,0 +1,41 @@
+.heder
+  お客様のことを教えてください
+  -# %script{src: "script.js"}
+  .inquiry
+    =form_with(model:@post,class: "test") do |f|
+      .inquiry__name
+        .inquiry__name__box
+          %label 名前を入力
+        = f.text_field :name_sei, class: "inquiry__name__box__sei"
+        = f.text_field :name_na, class: "inquiry__name__box__na"
+      .inquiry__name__kana
+        .inquiry__name__kana__box
+          %label なまえ（かな入力）
+        = f.text_field :name_sei_kana, class: "inquiry__name__kana__box__sei"
+        = f.text_field :name_na_kana, class: "inquiry__name__kana__box__sei"
+      .inquiry__mail
+        .inquiry__mail__box
+          %label mailアドレス
+        = f.email_field :mail, class: "inquiry__mail__box__text"
+      .inquiry__tel
+        .inquiry__tel__box
+          %label 電話番号を入力
+        = f.telephone_field :tel, class: "inquiry__tel__box__text"
+      .inquiry__yubin
+        .inquiry__yubin__box
+          %label 郵便番号を入力
+        .inquiry__yubin__box__in
+          %input{maxlength: "3",value:"", name: "zip21", size: "4", type: "text",class: "inquiry__yubin__box__in__1"}
+          %input{maxlength: "4", name: "zip22", onkeyup: "AjaxZip3.zip2addr('zip21','zip22','addr21','addr21');", size: "5", type: "text",class:"inquiry__yubin__box__in__2"}
+        .inquiry__yubin__box__zyusyo
+          %label 住所を入力
+        %input{name: "addr21", size: "40", type: "text",class: "inquiry__yubin__box__zyusyo__text"}
+      = f.button "送信",onclick: "submit();",value: "送信",class: "inquiry__yubin__submit"
+      != sprintf(f.date_select(:birthday, prefix:'birthday',with_css_classes:'XXXXX', prompt:"--",use_month_numbers:true, start_year:Time.now.year, end_year:1900, date_separator:'%s'),'年','月')+'日'
+
+
+
+
+%script{charset: "UTF-8", src: "https://ajaxzip3.github.io/ajaxzip3.js"}
+
+
