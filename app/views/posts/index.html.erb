@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>Miura test</title>
+    <meta name="description" content="初めてのホームページ">
+    <link rel="stylesheet" href="stylesheets/top.scss">
+  </head>
+
+  <body>
+    <div id="home" class="big-bg">      
+      <header class="page-header wrapper">
+      <h1><a href='index.html.erb'> <%= image_tag 'kamen.jpg',class: 'logo'%></a></h1>
+        <nav>
+            <ul class="main-nav">
+                <li><a href="news.html">News</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="contact.haml">Contact</a></li>
+            </ul>
+        </nav>
+      </header>
+
+      <div class="home-content wrapper">
+        <h2 class= "page-title">初めてのホームページMiura!</h2>
+          <p>なんとかホームページを作ってみました。</p>
+            <a class ="button" href="menu.html">メニューをみる</a>
+      </div><!--/.home-content -->
+    </div><!--/#home -->
+  </body>
+</html>
+
+
+<% link_to "投稿ページ",  new_post_path %>
+<% link_to "top",  posts_top_path%>
