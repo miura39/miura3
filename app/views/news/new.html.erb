@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>Miura menu</title>
+    <meta name="description" content="初めてのホームページ">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="stylesheets/top.scss">
+    <%# ”後で設定ロゴ入れる”<link rel="icon" type="image/png" href =""> %>
+  </head>
+
+  <body>
+    <div id="menu" class="big-bg">      
+      <header class="page-header wrapper">
+          
+        <h1><a href='/'> <%= image_tag 'kamen.jpg',class: 'logo'%></a></h1>
+          
+          <nav>
+            <ul class="main-nav">
+                <li><%= link_to "News", '/news' %></li>
+                <li><%= link_to "menu", '/news/new' %></li>
+                <li><a href="contact.haml">Contact</a></li>
+            </ul>
+          </nav>
+       </header>
+        <div class="menu-content wrapper">
+          <h2 class="page-title">Menu</h2>
+            <p>
+              住宅リフォーム設備のおすすめ商品を厳選しました。
+            </p>
+        </div><!-- /.menu-content -->
+    </div>         
+  </body>
+  </div><!--/#menu -->
+      <div class="wrapper grid">
+        <div class="item big-box">
+          <%= image_tag 'ie.jpg',alt: "住宅"%>
+          <p>大きい画像</p>
+        </div> 
+        <div class ="item">
+          <%= image_tag 'ie.jpg',alt: "住宅"%>
+          <p>おすすめのトイレです</p>
+        </div>
+        <div class ="item">
+          <%= image_tag 'ie.jpg',alt: "住宅"%>
+          <p>おすすめのキッチン🎵</p>
+        </div>
+        <div class ="item">
+          <%= image_tag 'ie.jpg',alt: "住宅"%>
+          <p>おすすめの水洗蛇口です</p>
+        </div>
+        <div class ="item">
+          <%= image_tag 'ie.jpg',alt: "住宅"%>
+          <p>おすすめのトイレです</p>
+        </div>
+        <div class ="item">
+          <%= image_tag 'ie.jpg',alt: "住宅"%>
+          <p>おすすめのトイレです</p>
+        </div>
+        <div class ="item">
+          <%= image_tag 'ie.jpg',alt: "住宅"%>
+          <p>おすすめのトイレです</p>
+        </div>
+        <div class ="item">
+          <%= image_tag 'ie.jpg',alt: "住宅"%>
+          <p>おすすめのトイレです</p>
+        </div>
+        <div class ="item">
+          <%= image_tag 'ie.jpg',alt: "住宅"%>
+          <p>おすすめのトイレです</p>
+        </div>
+      </div><!-- /.grid -->
+    </div><!-- /.menu -->   
+  <footer>
+    <div class ="wrapper">
+        <p><small>&copy: 2020 News box</small></p>
+  </footer>
+</html>
+
+
+<% link_to "投稿ページ",  new_post_path %>
