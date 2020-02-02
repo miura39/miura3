@@ -317,6 +317,22 @@ iframe{
   width: 100%;
 }
 
+/* sns */
+#sns{
+  background: #faf7f0;
+  padding: 4% 0;
+}
+#sns .wrapper{
+  display: flex;
+  justify-content: space-between;
+}
+#sns .sub-title{
+  margin-bottom: 30p;
+}
+.sns-box{
+  width: 30%;
+}
+
 /*スマホ画面設定
 -------------------------------*/
 @media(max-width: 600px){
