@@ -127,10 +127,18 @@ footer p{
   color: #fff;
   font-size: 0.875rem;
 }
-/*記事部分
+
+
+.news-contents{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+  /*記事部分
 -----------------------------*/
+
+}
 article {
-  width: 74%;
+  width: 60%;
 }
 
 /*サイドバー部分
@@ -139,10 +147,8 @@ aside {
   width: 22%;
 }
 
-.news-contents{
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 50px;
+.ad{
+  width: 14%;
 }
 
 .post-info{
@@ -210,4 +216,74 @@ article p{
 }
 .sub-menu a:hover{
   color: #0bd;
+}
+
+/*スマホ画面設定
+-------------------------------*/
+@media(max-width: 600px){
+  h1{
+    color: "0bd"
+  }
+  .page-title{
+    font-size: 2.5rem;
+  }
+  
+  /*HEADER*/
+  .main-nav{
+    font-size: 1rem;
+    margin-top: 10px;
+  }
+  .main-nav li{
+    margin: 0 20px;
+  }
+  
+  /*HOME*/
+  .home-content{
+    margin-top: 20%;
+  }
+  /*横並び*/
+  .page-header{
+    flex-direction: column;
+    align-items: center;
+  }
+  /*Newsページ*/
+  .news-contents{
+    flex-direction: column;
+  }
+  article,
+  aside{
+    width: 100%;
+  }
+  #news .page-title{
+    margin-top: 30px;
+  }
+  aside{
+    margin-top: 60px;
+  }
+  .post-info{
+    margin-bottom: 30px;
+  }
+  .post-date{
+    width: 70px;
+    height: 70px;
+    font-size: 1rem;
+  }
+  .post-date span{
+    font-size: 0.875rem;
+    padding-top: 2px;
+  }
+  .post-title{
+    font-size: 1.375rem;
+  }
+  .post-cat{
+    font-size: 0.875rem;
+    margin-top: 10px;
+  }
+  .post-title,
+  .post-cat{
+    margin-left: 80px;
+  }
+
+
+  
 }
