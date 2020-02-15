@@ -5,7 +5,9 @@
     =form_with(model:@post,class: "test") do |f|
       .inquiry__name
         .inquiry__name__box
-          %label 名前を入力
+          %label 名前を入力 
+           必須
+          　%span　必須 
         = f.text_field :name_sei, class: "inquiry__name__box__sei"
         = f.text_field :name_na, class: "inquiry__name__box__na"
       .inquiry__name__kana
